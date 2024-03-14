@@ -10,12 +10,14 @@ async function asyncOdd (i) {
   console.log('async odd', i)
 }
 
+// Why we have to wrap setTimeout in a promise?
 function setTimeoutPromise (delay) {
   return new Promise((resolve) => {
     setTimeout(() => resolve(), delay)
   })
 }
 
+// Why we have to wrap setImmediate in a promise?
 function setImmediatePromise () {
   return new Promise((resolve) => {
     setImmediate(() => resolve())
